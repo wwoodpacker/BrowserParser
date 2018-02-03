@@ -178,7 +178,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (webView.canGoBack())
-                    webView.goBack();
+                    //webView.goBack();
             }
         });
         mBtnForward.setOnClickListener(new View.OnClickListener() {
