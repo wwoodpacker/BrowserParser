@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context="com.prog.browserparser.MainActivity">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textUri"
+        android:selectAllOnFocus="true"
+        android:imeOptions="actionGo"
+        android:id="@+id/goUrl"
+        android:hint="Type URL to go"
+        android:text="Type URL to go"
+        android:layout_toLeftOf="@+id/btnGo"
+        android:layout_toStartOf="@id/btnGo"
+        android:gravity="start"
+        android:textAlignment="textStart"
+        />
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/btnBack"
+        android:layout_toStartOf="@+id/btnBack"
+        android:text="GO!"
+        android:id="@+id/btnGo"
+        android:layout_marginLeft="-6dp"
+        android:layout_marginRight="-4dp"
+        />
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/btnForw"
+        android:layout_toStartOf="@+id/btnForw"
+        android:text="&lt;"
+        android:id="@+id/btnBack"
+        android:layout_marginLeft="-4dp"
+        android:layout_marginRight="-4dp"
+        />
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="&gt;"
+        android:id="@+id/btnForw"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="-4dp"
+        android:layout_marginRight="-4dp"
+        />
+    <WebView
+        android:id="@+id/web"
+        android:layout_below="@+id/progressbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ProgressBar
+        android:layout_below="@+id/goUrl"
+        android:layout_marginTop="-7dp"
+        android:id="@+id/progressbar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="@android:color/transparent"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="1"
+        />
+
+</RelativeLayout>
